@@ -51,6 +51,7 @@
 				:class="!isScreenfull ? 'icon-fullscreen' : 'icon-tuichuquanping'"
 			></i>
 		</div>
+
 		<el-dropdown :show-timeout="70" :hide-timeout="50" @command="onHandleCommandClick">
 			<span class="layout-navbars-breadcrumb-user-link">
 				<img :src="getUserInfos.photo" class="layout-navbars-breadcrumb-user-link-photo mr5" />
@@ -70,6 +71,7 @@
 				</el-dropdown-menu>
 			</template>
 		</el-dropdown>
+
 		<Search ref="searchRef" />
 	</div>
 </template>

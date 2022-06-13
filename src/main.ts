@@ -4,6 +4,7 @@ import router from './router';
 import { store, key } from './store';
 import { directive } from '/@/utils/directive';
 import { i18n } from '/@/i18n/index';
+console.log(i18n.global);
 import other from '/@/utils/other';
 
 import ElementPlus from 'element-plus';
@@ -11,6 +12,11 @@ import 'element-plus/dist/index.css';
 import '/@/theme/index.scss';
 import mitt from 'mitt';
 import VueGridLayout from 'vue-grid-layout';
+
+if (process.env.NODE_ENV === 'production') {
+	const { mockXHR } = require('./mock');
+	mockXHR();
+}
 
 const app = createApp(App);
 
